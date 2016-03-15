@@ -8,5 +8,5 @@ class Character():
         self.charisma = charisma
         
 Caroline = 1
-Kyle = 2
+Liam = 2
 Gabriela = 3
