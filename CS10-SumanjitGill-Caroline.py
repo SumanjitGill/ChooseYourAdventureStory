@@ -43,4 +43,8 @@ while True:
     print node.name
     print node.description
     user_command = raw_input('> ')
-    node.move(user_command)
+    if user_command in ['north','south','west','east']:
+        try:
+            node.move(user_command)
+        except:
+            print 'You can\'t go that way! Try again.'
