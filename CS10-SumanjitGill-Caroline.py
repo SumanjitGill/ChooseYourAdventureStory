@@ -8,7 +8,13 @@ class Character():
         #self.status = status
         #self.background = background
         #self.personality = personality
-        #self.charisma = charisma
+        
+    def stats(self):
+        print self.full_name
+        print self.age
+        print self.status
+        print self.background
+        print self.personality
         
 Caroline = Character('Caroline','Karolina "Caroline" Ativa')
 Liam = Character('Liam','Liam Youngblood')
@@ -30,7 +36,7 @@ class Room:
         self.name = name
         self.description = description
         
-    def move(self, direction):
+    def move(self, room):
         while True:
             global node
             node = globals()[getattr(self, direction)]
@@ -47,6 +53,15 @@ while True:
             node.move(user_command)
         except:
             print 'You can\'t go that way! Try again.'
+            
+police_office
+study
+garden
+living_room
+kitchen
+bedroom
+lab
+
 '''
             
 '''class Notebook:
@@ -92,7 +107,17 @@ class Room:
     def __init__(self, name, description):
         self.name = name
         self.description = description
-#Do dialogue in order this way by continously calling the dialogue 'say' function
+        
+#Do dialogue in order this by continously calling the dialogue 'say' function
 #Progress stories this way
 
-        
+while True:
+    user_response = raw_input('> ')
+    if user_response in ['q','quit','exit']:
+        sys.exit(0)
+
+#Items
+'''
+Have three parameters in __init__ for the item name
+Refer to it as you did with dialogue
+'''
