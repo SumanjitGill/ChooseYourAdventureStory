@@ -19,6 +19,8 @@ class Inventory:
             print obj.description
     
 user_inventory = Inventory()
+
+#-------------------------------------------------------------------------------
     
 class Item:
     def __init__(self, name, description):
@@ -39,6 +41,8 @@ class Item:
         Inventory.inventory_two.remove(self.name)
 
 axe = Item('Axe', 'Pointy')
+
+#-------------------------------------------------------------------------------
 
 #Storyline
 class Character():
@@ -70,9 +74,14 @@ class Character():
 #Sakshi = Character('Sakshi','Sakshi Goenka')
 #Leng = Character('Leng','Leng Li')
 
+#-------------------------------------------------------------------------------
+
 #def help():
 #    user_q = raw_input('What do you need help with?\n')
-            
+
+#-------------------------------------------------------------------------------
+           
+#For Version 2: 
 '''class Notebook:
     def __init__(self):
         self.notebook = []
@@ -103,6 +112,8 @@ your_notebook = Notebook()
 #4691 E Harvard Ave Fresno, CA 93703-2075
 '''
 
+#-------------------------------------------------------------------------------
+
 class Dialogue:
     def __init__(self, dialogue):
         self.dialogue = dialogue
@@ -111,6 +122,8 @@ class Dialogue:
         print char.name+':','"'+self.dialogue+'"'
         
 hello = Dialogue('Hello')
+
+#-------------------------------------------------------------------------------
 
 #Rooms
 
@@ -127,36 +140,45 @@ class Room:
         
     def see_item(self, cosa):
         print cosa.description
-        
-    def move(self, room):
-        while True:
-            global node
-            node = globals()[getattr(self, room)]
-            break
- 
+            
+police_office = Room('Police Chief Ativa\'s Office', 'This office.', None, None, None)
+study = Room('The Study', 'This study.', None, None, None)
+garden = Room('Garden', 'This garden.', None, None, None)
+living_room = Room('Living Room', 'This room.', None, None, None)
+kitchen = Room('Kitchen', 'This kitchen.', None, None, None)
+bedroom = Room('Nicole\'s Bedroom', 'This is the crime scene.', None, None, None)
+lab = Room('Gabi\'s Room', 'This lab.', None, None, None)
+front_yard = Room('Front Yard', 'This front yard.', None, None, None)
+
+global node 
 node = living_room           
-                                  
+'''                                
 while True:
     print node.name
     print node.description
     user_command = raw_input('> ')
     if user_command in ['q', 'quit', 'exit']:
         sys.exit(0)
-    if user_command in ['office','study','garden','living', 'kitchen', 'bedroom', 'lab']:
-        try:
-            node.move(user_command)
-        except:
-            print 'You can\'t go there! Try again.'
-            
-#police_office
-#study
-#garden
-#living_room
-#kitchen
-#bedroom
-#lab
-        
+    elif user_command == 'police office':
+        node = police_office
+    elif user_command == 'study':
+        node = study
+    elif user_command == 'garden':
+        node = garden
+    elif user_command == 'living room':
+        node = living_room
+    elif user_command == 'kitchen':
+        node = kitchen
+    elif user_command == 'bedroom':
+        node = bedroom
+    elif user_command == 'lab':
+        node = lab
+    elif user_command == 'front yard':
+        node = front_yard
+    '''
 bathroom = Room('Bathroom', 'This is where you shower and excrete your junk.', axe, None, None)
+
+#-------------------------------------------------------------------------------
         
 #Do dialogue in order this by continously calling the dialogue 'say' function
 #Progress stories this way
@@ -186,6 +208,9 @@ bathroom = Room('Bathroom', 'This is where you shower and excrete your junk.', a
 #Numerical Riddle (Passcode = (0129))
     #- Tells you which digits you got correct and which you didn't
     #- 
+    
+#-------------------------------------------------------------------------------
+    
 '''
 #Setting up variables to be called on later
 life = 5
