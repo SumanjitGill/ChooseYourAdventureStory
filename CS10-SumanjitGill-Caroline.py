@@ -59,20 +59,19 @@ class Character():
         print self.age
         print self.status
         print self.background
-        print self.personality
         
     def locate(character):
         print character.name+ 'is located in: %s' %character.location
         
-#Caroline = Character('Caroline','Karolina "Caroline" Ativa')
-#Liam = Character('Liam','Liam Youngblood')
-#Gabriela = Character('Gabi','Gabriela Solis')
-#Andres = Character('Andres','Andres Leal')
-#Bree = Character('Bree','Breanna "Bree" Scholtz')
-#Nicole = Character('Nicole','Nicole Laurenya')
-#Liev = Character('Liev','Liev Ativa')
-#Sakshi = Character('Sakshi','Sakshi Goenka')
-#Leng = Character('Leng','Leng Li')
+#Caroline = Character('Caroline','Karolina "Caroline" Ativa', 22, 'Alive', '', 'You are her... So wherever you are that\'s where she is.')
+#Liam = Character('Liam','Liam Youngblood', 23, 'Alive', '', 'He\'s always by your side.')
+#Gabriela = Character('Gabi','Gabriela Solis',18, 'Alive', '', 'She\'s found in the lab at the police office.')
+#Andres = Character('Andres','Andres Leal', 30, 'Alive; Suspect', '', 'He\'s found in the garden.')
+#Bree = Character('Bree','Breanna "Bree" Scholtz', 35, 'Alive; Suspect', 'She works as Leng\'s maid around the mansion.', 'She\'s found in the living room.')
+#Nicole = Character('Nicole','Nicole Laurenya', 31, 'Dead; Victim', 'She was a rich heiress of Twilight Grove.', 'Her corpse is found in her bedroom.')
+#Liev = Character('Liev','Liev Ativa', 45, 'Alive', 'He is your father and the police chief who assigned you to this investigation.', 'He is found in the police office.')
+#Sakshi = Character('Sakshi','Sakshi Goenka', 32, 'Alive; Suspect','Sakshi is a business tycoon and is Leng\'s girlfriend.', 'She is found in the study.')
+#Leng = Character('Leng','Leng Li', 33, 'Alive; Suspect', 'He is a renowned chef and is Sakshi\'s lover.', 'He is found in the kitchen.')
 
 #-------------------------------------------------------------------------------
 
@@ -214,7 +213,7 @@ bathroom = Room('Bathroom', 'This is where you shower and excrete your junk.', a
 '''
 #Setting up variables to be called on later
 life = 5
-bank = ["illuminati confirmed", "slenderman", "guess", "password", "luigi", "king boo", "kevin", "caaaaaarl", "john cena"]
+bank = ["zero one twenty nine"]
 word = random.choice(bank)
 
 letters_left = list(set(word)) #creating a list of letters in word
@@ -227,20 +226,20 @@ wrong_answers = 0
 hidden_phrase = []
 foo = list(word) 
 
-print ("You currently have 5 lives. Try not to waste them.")
+print ("You have five chances right now.")
 
 while life > 0: #The dreaded while loop
     
 
 
-    for letter in word:     #This is replacing every letter in the word with a pound symbol
-        hidden_phrase = []  #If the letter is guessed, it is replaced by the correct letter
-        if letter in user_guesses:  #Else, it remains a hastag
+    for letter in word:    
+        hidden_phrase = [] 
+        if letter in user_guesses:
             print letter,
         elif letter == ' ':
             print letter,
         else:
-            print ('#'),
+            print ('_'),
             
             
     current_guess = raw_input("Guess a letter: ") #This takes in raw input
@@ -249,17 +248,11 @@ while life > 0: #The dreaded while loop
         letters_left.remove(current_guess)              
         #print letters_left
     print user_guesses #Prints guesses so far
-    if current_guess not in word: #If you guess wrong, lose life energy
+    if current_guess not in word: #If you guess incorrectly
         life -= 1
         wrong_answers += 1
-        print ("Oh, how sad. Lost a life. You have ") + str(life) + (" lives.")
-    
-
-
-    
+        print ("Your life count: ") + str(life)
             
     if len(letters_left) == 0:
-        print ("You've won! Don't you feel proud to actually accomplish something?")
-        break #Win if the letter_left has nothing in the list
-        
+        gaby.say()
         '''
