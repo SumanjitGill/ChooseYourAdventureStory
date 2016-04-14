@@ -67,7 +67,7 @@ chair = Item('Chair', '')
 
 pen = Item('Sakshi\'s Pen', '')
 
-water_glass = Item('Sakshi\'s Glass', '')
+water_glass = Item('Sakshi\'s Gllass', '')
 
 water_glass_2 = Item('','')
 
@@ -203,10 +203,7 @@ Liam whistles, getting another irritated look from the Chief. You know what Liam
 Chief: "As you can understand, it\'s a high profile case and the Mayor is concerned. The crime scene is quite isolated so it has been kept quiet. \n\
 I want both of you to head the case and wrap it up. Come talk to me as soon as you\'ve solved it."\n\
 \n\
-You exit the Chief\'s office with Liam. What would you like to do:\n\
-	- police office\n\
-	- mansion\n\
-	- lab'
+You exit the Chief\'s office with Liam.\n'
 
 chief = '\nChief: "What are you waiting for? Finish up the case!"'
 
@@ -258,7 +255,7 @@ sakshi_1 = 'You enter the study to see a woman sitting at the desk and writing w
 \n\
 You: "Hello. I am Detective Ativa and this is my partner, Detective Youngblood. We need to ask you some questions. What is your name?"\n\
 \n\
-Sakshi: "I\'m Sakshi Goenka."\n\
+Woman: "I\'m Sakshi Goenka."\n\
 \n\
 Liam: "The business tycoon?"\n\
 \n\
@@ -276,79 +273,77 @@ You: "Thank you for your time. We\'ll be back later if we have more questions."'
 
 leng_1 = '\nYou enter the kitchen to see a man pouring himself a glass of water, looking lost.\n\
 \n\
-You: Hello. I am Detective Ativa and this is my partner, Detective Youngblood. We need to ask you some questions. What is your name?"\n\
+You: "Hello. I am Detective Ativa and this is my partner, Detective Youngblood. We need to ask you some questions. What is your name?"\n\
 \n\
-Leng: My name is Leng, Leng Li. \n\
+Man: "My name is Leng, Leng Li." \n\
 \n\
-Liam: And how were you related to the victim?\n\
+Liam: "And how were you related to the victim?"\n\
 \n\
-Leng: Nicole is, was, one of my best friends. She, my girlfriend Sakshi, Andres, and I grew up together.\n\
+Leng: "Nicole is, was, one of my best friends. She, my girlfriend Sakshi, Andres, and I grew up together."\n\
 \n\
-You: I\'m so sorry for your loss. Can you tell us what happened?\n\
+You: "I\'m so sorry for your loss. Can you tell us what happened?"\n\
 \n\
-Leng: All of us finally had some time off and so I invited everyone to stay for a few days. I was looking forward to it. I can\'t believe the nightmare it has become. Everything was so normal and nostalgic. Nicole was having a blast the entire time, we all were. This morning…we all came for breakfast but Nicole wasn\'t there. I told Bree, my maid, to call her. She screamed so loud and we all ran up there and saw…she was dead. I still can\'t believe she\'s really gone.\n\
+Leng: "All of us finally had some time off and so I invited everyone to stay for a few days. I was looking forward to it. I can\'t believe the nightmare it has become. Everything was so normal and nostalgic. Nicole was having a blast the entire time, we all were. This morning…we all came for breakfast but Nicole wasn\'t there. I told Bree, my maid, to call her. She screamed so loud and we all ran up there and saw…she was dead. I still can\'t believe she\'s really gone."\n\
 \n\
-You: Thank you for your time. We\'ll be back later if we have more questions.'
+You: "Thank you for your time. We\'ll be back later if we have more questions."'
 
 bree_1 = '\nYou enter the living room to see a woman nervously arranging a vase of flowers, her face disturbed.\n\
 \n\
-You: Hello. I am Detective Ativa and this is my partner, Detective Youngblood. We need to ask you some questions. What is your name?\n\
+You: "Hello. I am Detective Ativa and this is my partner, Detective Youngblood. We need to ask you some questions. What is your name?\n\
 \n\
-Bree: My name is Bree Scholtz.\n\
+Woman: "My name is Bree Scholtz."\n\
 \n\
-Liam: And how were you related to the victim?\n\
+Liam: "And how were you related to the victim?"\n\
 \n\
-Bree: I\'m not. I mean, I\'m Mr. Li\'s maid so I only knew Ms. Nicole in passing.\n\
+Bree: "I\'m not. I mean, I\'m Mr. Li\'s maid so I only knew Ms. Nicole in passing."\n\
 \n\
-You: I understand. Can you tell us what happened? You found the body, correct?\n\
+You: "I understand. Can you tell us what happened? You found the body, correct?"\n\
 \n\
-Bree: Yes, it was horrible. Last night, Ms. Nicole had asked me to bring her a cup of the special blend that Mr. Li had set aside for her in the morning at precisely 8 a.m. Unfortunately, I didn\'t get up there until about 8:30 a.m. and Ms. Nicole was in the shower. I helped Mr. Li in the kitchen until breakfast was to be served. Mr. Li sent me upstairs when Ms. Nicole didn\'t come down. I went to her room and opened the door to see her lying on the ground, completely still. I screamed and they all came running up. I don\'t remember who said she was dead; I was in shock. It was a truly horrifying experience.\n\
+Bree: "Yes, it was horrible. Last night, Ms. Nicole had asked me to bring her a cup of the special blend that Mr. Li had set aside for her in the morning at precisely 8 a.m. Unfortunately, I didn\'t get up there until about 8:30 a.m. and Ms. Nicole was in the shower. I helped Mr. Li in the kitchen until breakfast was to be served. Mr. Li sent me upstairs when Ms. Nicole didn\'t come down. I went to her room and opened the door to see her lying on the ground, completely still. I screamed and they all came running up. I don\'t remember who said she was dead; I was in shock. It was a truly horrifying experience."\n\
 \n\
-Liam: So you were also the last person to see the victim alive?\n\
+Liam: "So you were also the last person to see the victim alive?"\n\
 \n\
-Bree: I suppose so. Ms. Nicole was in the shower when I went there so I never saw her exactly.\n\
+Bree: "I suppose so. Ms. Nicole was in the shower when I went there so I never saw her exactly."\n\
 \n\
-You: Thank you for your time. We\'ll be back later if we have more questions.'
+You: "Thank you for your time. We\'ll be back later if we have more questions."'
 
 andres_1 = '\nYou enter the garden to see a man sitting in the garden, mournfully playing a tune on his clarinet. \n\
 \n\
-You: Hello. I am Detective Ativa and this is my partner, Detective Youngblood. We need to ask you some questions. What is your name?\n\
+You: "Hello. I am Detective Ativa and this is my partner, Detective Youngblood. We need to ask you some questions. What is your name?"\n\
 \n\
-Andres: I\'m Dr. Andres Leal. \n\
+Man: "I\'m Dr. Andres Leal." \n\
 \n\
-Liam: And how were you related to the victim?\n\
+Liam: "And how were you related to the victim?"\n\
 \n\
-Andres: Nicole was one of my closest friends. Sakshi, Leng, Nicole, and I have been best friends since as long as I can remember.\n\
+Andres: "Nicole was one of my closest friends. Sakshi, Leng, Nicole, and I have been best friends since as long as I can remember."\n\
 \n\
-You: I\'m so sorry for your loss. Can you tell us what happened?\n\
+You: "I\'m so sorry for your loss. Can you tell us what happened?"\n\
 \n\
-Andres: Leng had invited all of us for the week and it was going great. It was nice to all hang out again. This morning, the maid went up to call Nicole down for breakfast and she just started screaming. We all ran up there and Nicole was lying on the floor. I went over to her and checked if there was a pulse but I couldn\'t find one and she wasn\'t breathing. I tried to do CPR but…we were too late.\n\
+Andres: "Leng had invited all of us for the week and it was going great. It was nice to all hang out again. This morning, the maid went up to call Nicole down for breakfast and she just started screaming. We all ran up there and Nicole was lying on the floor. I went over to her and checked if there was a pulse but I couldn\'t find one and she wasn\'t breathing. I tried to do CPR but…we were too late."\n\
 \n\
-You: Thank you for your time. We\'ll be back later if we have more questions.'
+You: "Thank you for your time. We\'ll be back later if we have more questions."'
 
 gabi_2 = '\nYou enter the lab to see Gabi typing quickly on a computer.\n\
 \n\
-You: Hey, Gabriella.\n\
+You: "Hey, Gabriella."\n\
 \n\
-Gabriella: Karolina, Liam, my two fav idiots.\n\
+Gabriella: "Karolina, Liam, my two fav idiots."\n\
 \n\
-Liam: What\'s the good word, Gabi?\n\
+Liam: "What\'s the good word, Gabi?"\n\
 \n\
-Gabriella: First, let me say thank you for such a sweet case. I mean, Twilight Grove? Money City!\n\
+Gabriella: "First, let me say thank you for such a sweet case. I mean, Twilight Grove? Money City!"\n\
 \n\
-Liam: You\'re telling me. The mansion is so huge, I keep getting confused which room is where.\n\
+Liam: "You\'re telling me. The mansion is so huge, I keep getting confused which room is where."\n\
 \n\
-You: *clear throat* Guys, focus. \n\
+You: *clear throat* "Guys, focus." \n\
 \n\
-Gabriella: Right, you\'re right. I\'m still waiting on the coroner to send me the full report but what I can tell you is that this tea cup contains poison.\n\
+Gabriella: "Right, you\'re right. I\'m still waiting on the coroner to send me the full report but what I can tell you is that this tea cup contains poison."\n\
 \n\
-Liam: What kind of poison?\n\
+Liam: "What kind of poison?"\n\
 \n\
-Gabriella: I don\'t know yet. And before you ask, I am working on it and the cellphone. You\'ll have to come back later. Why don\'t you two go back and snoop around. Make yourselves useful and bring some more goodies!'
+Gabriella: "I don\'t know yet. And before you ask, I am working on it and the cellphone. You\'ll have to come back later. Why don\'t you two go back and snoop around. Make yourselves useful and bring some more goodies!"'
 
-gabi_3 = '\nGabi: Got more? No? I\'m not a miracle worker; bring me something I can work my magic on.'
-
-
+gabi_3 = '\nGabi: "Got more? No? I\'m not a miracle worker; bring me something I can work my magic on."'
 
 #-------------------------------------------------------------------------------
 
@@ -390,15 +385,7 @@ and look under the bed.', cell_phone, teacup, body, morphine_capsules)
 lab = Room('Gabi\'s Lab', 'This lab is where you can always find Gabi. Come here \
 when you need some evidence examined!', None, None, None, None)
 
-front_yard = Room('Mansion\'s Front Yard', 'A lush green lawn spreads like a blanket in front of a massive and ornately structured mansion, the view only marred by splashes of trash.\n\
-From here you can go to:\n\
-    - study\n\
-    - kitchen\n\
-    - crime scene\n\
-    - living room\n\
-    - garden\n\
-    - police office\n\
-    - lab', pill_bottle, None, None, None)
+front_yard = Room('Mansion\'s Front Yard', 'A lush green lawn spreads like a blanket in front of a massive and ornately structured mansion, the view only marred by splashes of trash.\n', pill_bottle, None, None, None)
 
 global node 
 node = police_office       
@@ -423,7 +410,6 @@ while True:
         warning +=1
     print('\n')
     print node.name
-    print node.description
             
     if node == police_office and start == 0:
         print('\n')
@@ -472,29 +458,63 @@ while True:
         conversation +=1
         print('\nThat\'s all for now folks! No more sleuthing around yet. Stay tuned for the final product!')
         
-    user_command = raw_input('> ')
+    if conversation == 4:
+        study.description == 'You make look into'
+        kitchen.description == ''
+        living_room.description == ''
+        front_yard.description == ''
+        garden.description == ''  
+        
+    if node in [police_office, lab]:
+        print('You can go to:\n\
+        -mansion\n\
+        -lab\n\
+        -police office\n\
+        \n\
+Additional commands:\n\
+        - search')
+    elif node in [study, kitchen, front_yard, living_room, garden]:
+        print('You can go to:\n\
+        - study\n\
+        - mansion\n\
+        - kitchen\n\
+        - crime scene\n\
+        - living room\n\
+        - garden\n\
+        - police office\n\
+        - lab\n\
+        \n\
+Additional commands:\n\
+        - search\n\
+        - pick up *item name*')
+    
+    user_command = raw_input('> ') 
+   
     if user_command in ['q', 'quit', 'exit']:
         sys.exit(0)
-    elif user_command == 'police office':
+    elif 'police office' in user_command:
         node = police_office
-    elif user_command == 'study' and node == front_yard:
+    elif 'study' in user_command and node in [front_yard, garden, living_room, kitchen, bedroom]:
         node = study
-    elif user_command == 'garden' and node == front_yard:
+    elif 'garden' in user_command and node in [front_yard, study, living_room, kitchen, bedroom]:
         node = garden
-    elif user_command == 'living room' and node == front_yard:
+    elif 'living room' in user_command and node in [front_yard, garden, study, kitchen, bedroom]:
         node = living_room
-    elif user_command == 'kitchen' and node == front_yard:
+    elif 'kitchen' in user_command and node in [front_yard, garden, living_room, study, bedroom]:
         node = kitchen
-    elif user_command == 'crime scene' and node == front_yard:
+    elif 'crime scene' in user_command and node in [front_yard, garden, living_room, kitchen, study]:
         node = bedroom
-    elif user_command == 'lab':
+    elif 'lab' in user_command:
         node = lab
-    elif user_command == 'mansion':
+    elif 'mansion' in user_command:
         node = front_yard
+    elif 'search' in user_command:
+        print node.description
     else:
-        print 'You can\'t go there.'
+        print '?'
+    
         
-    if user_command == 'examine body':
+    if 'examine body' in user_command:
         print(examine)
         
     elif user_command == 'pick up paperwork' and node == study:
@@ -574,41 +594,66 @@ while True:
     
 '''
 #Setting up variables to be called on later
-life = 5
-bank = ["zero one twenty nine"]
-word = random.choice(bank)
-letters_left = list(set(word)) #creating a list of letters in word
-if ' ' in word:
-    letters_left.remove(' ') #removing the space if there is one
+def passcode_hangman():
+    life = 5
+    bank = ["zero one twenty nine"]
+    word = random.choice(bank)
+    letters_left = list(set(word)) #creating a list of letters in word
+    if ' ' in word:
+        letters_left.remove(' ') #removing the space if there is one
+                
+    user_guesses = [] #More variables
+    wrong_answers = 0
+    hidden_phrase = []
+    foo = list(word) 
+    print ("You have five chances right now.")
+    while life > 0: 
+        
+        for letter in word:    
+            hidden_phrase = [] 
+            if letter in user_guesses:
+                print letter,
+            elif letter == ' ':
+                print letter,
+            else:
+                print ('_'),            
             
-user_guesses = [] #More variables
-wrong_answers = 0
-hidden_phrase = []
-foo = list(word) 
-print ("You have five chances right now.")
-while life > 0: 
+        current_guess = raw_input("Guess a letter: ") #This takes in raw input
+        user_guesses.append(current_guess)
+        if current_guess in word: #If guess in word, remove from letters_left
+            letters_left.remove(current_guess)              
+            #print letters_left
+        print user_guesses #Prints guesses so far
+        if current_guess not in word: #If you guess incorrectly
+            life -= 1
+            wrong_answers += 1
+            print ("Your life count: ") + str(life)
+                
+        if len(letters_left) == 0:
+            gaby.say()
+            '''
+            
+def financial_riddle():
+    key = 'bree'
+    #Time = 20 seconds; if they don\'t leave in time, lose game.
     
-    for letter in word:    
-        hidden_phrase = [] 
-        if letter in user_guesses:
-            print letter,
-        elif letter == ' ':
-            print letter,
-        else:
-            print ('_'),
-            
-            
-    current_guess = raw_input("Guess a letter: ") #This takes in raw input
-    user_guesses.append(current_guess)
-    if current_guess in word: #If guess in word, remove from letters_left
-        letters_left.remove(current_guess)              
-        #print letters_left
-    print user_guesses #Prints guesses so far
-    if current_guess not in word: #If you guess incorrectly
-        life -= 1
-        wrong_answers += 1
-        print ("Your life count: ") + str(life)
-            
-    if len(letters_left) == 0:
-        gaby.say()
-        '''
+#There is one of us here in the mansion
+#Who is not what they seem
+#They may seem to be kind
+#But that\'s a mirage and a dream
+#Simple-like fashion
+#But formal like language
+#
+    user_riddle_guess = raw_input('Take a guess:\n')
+    if user_riddle_guess.strip().lower() == key:
+        print 'You have guessed correctly;\n\
+        it is Bree. You have now gained access to\n\
+        Sakshi\'s desk. Press enter to see what you find.'
+        
+    else:
+        print 'Sorry. That\'s not who it is.\n'
+        print 'You and Liam quickly cover your ears.\n\
+        Liam: "WHAT is that horrible ringing noise?!"\n\
+        You: "We must have set off an alarm when we tried opening the desk lock!\n\
+        Liam: "We have to get out of here!"\n\
+        You: "Now!!"'
