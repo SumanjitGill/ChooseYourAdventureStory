@@ -5,6 +5,7 @@
 
 import sys
 import random
+import time
 
 class Inventory:
     def __init__(self):
@@ -345,6 +346,13 @@ Gabriella: "I don\'t know yet. And before you ask, I am working on it and the ce
 
 gabi_3 = '\nGabi: "Got more? No? I\'m not a miracle worker; bring me something I can work my magic on."'
 
+riddle_win = 'You find some financial paperwork.\n\
+You: "This is interesting."\n\
+Liam: "What is it?"\n\
+You: "Looks like Sakshi and Nicole may have been best friends but their companies are business rivals. We need to have another chat--"\n\
+At this moment, Sakshi walks in.\n\
+Sakshi: "What are you two doing here?"\n'
+
 #-------------------------------------------------------------------------------
 
 #Rooms
@@ -635,25 +643,40 @@ def passcode_hangman():
             
 def financial_riddle():
     key = 'bree'
+    number_key = 21855
     #Time = 20 seconds; if they don\'t leave in time, lose game.
     
-#There is one of us here in the mansion
-#Who is not what they seem
-#They may seem to be kind
-#But that\'s a mirage and a dream
-#Simple-like fashion
-#But formal like language
-#
+    riddle = 'There is one of us here in the mansion\n\
+Who is not what they seem\n\
+They may seem to be kind\n\
+But that\'s a mirage and a dream\n\
+Simple-like fashion\n\
+With formal like language\n\
+And a nervous register\n\
+Who am I?\n'
+
+    print riddle
+    
     user_riddle_guess = raw_input('Take a guess:\n')
     if user_riddle_guess.strip().lower() == key:
         print 'You have guessed correctly;\n\
-        it is Bree. You have now gained access to\n\
+        it is Bree. The padlock code numbers correspond\n\
+        with the letters in her name. Type in \n\
+        the numerical code:\n'
+        if user_riddle_guess.strip() == number_key:
+            print 'You have now gained access to\n\
         Sakshi\'s desk. Press enter to see what you find.'
+        else:
+            print 'Wrong numerical code.'
+            
+            if user_riddle_guess.strip() == '':
+                user_inventory.pick_up(paperwork)
+                print riddle_win
         
     else:
         print 'Sorry. That\'s not who it is.\n'
         print 'You and Liam quickly cover your ears.\n\
         Liam: "WHAT is that horrible ringing noise?!"\n\
         You: "We must have set off an alarm when we tried opening the desk lock!\n\
-        Liam: "We have to get out of here!"\n\
+        Liam: "We have to get out of the mansion!"\n\
         You: "Now!!"'
