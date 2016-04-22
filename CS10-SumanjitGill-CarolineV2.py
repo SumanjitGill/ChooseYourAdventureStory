@@ -602,13 +602,13 @@ while True:
         print(gabi_2)
         conversation +=1
         
-    if sakshi_two == 0 and sakshi_one == 1:
+    if sakshi_two == 0 and sakshi_one == 1 and conversation == 4:
         study.description = 'You may now look under the sofa, in the bookshelf, and in the desk. Maybe there\'s some evidence in here.'
     
-    if leng_two == 0 and leng_one == 1:
+    if leng_two == 0 and leng_one == 1 and conversation == 4:
         kitchen.description = 'You may search in the cupboard, in the sink, or in the fridge. Could there be something incriminating here?'
     
-    if andres_two == 0 and andres_one == 1:
+    if andres_two == 0 and andres_one == 1 and conversation == 4:
         garden.description = 'You can check out the area behind the trees, in the bushes, or in the gazebo. There might be something intresting here.'               
                                                           
         
@@ -696,12 +696,18 @@ Additional commands:\n\
                 print ("Your life count: ") + str(life)
                     
             if len(letters_left) == 0:
-                print('Gabriella: "Which conversation do you wanna read?"\
-                    - Leng\n\
-                    - Andres\n\
-                    - Unknown')
-                pic_3.append(hang)
                 break
+                
+        if life<=0:
+            print('Gabriella: "Ha! Come back and try again."')
+            
+        else:
+            print('\n')
+            print('Gabriella: "Which conversation do you wanna read?"\
+                - Leng\n\
+                - Andres\n\
+                - Unknown')
+            hang.inventory.append(pic_3)
                 
     
     
@@ -731,16 +737,20 @@ Additional commands:\n\
             if current_guess in word: #If guess in word, remove from letters_left
                 letters_left.remove(current_guess)              
                 #print letters_left
-            print user_guesses #Prints guesses so far
             if current_guess not in word: #If you guess incorrectly
                 life -= 1
                 wrong_answers += 1
                 print ("Your life count: ") + str(life)
                     
             if len(letters_left) == 0:
-                print(gazebo)
-                pic.append(hang)
                 break
+                
+        if life <=0:
+            print 'You\'ve lost this minigame, come back and try again.'
+        else:
+            print('\n')
+            print(gazebo)
+            hang.inventory.append(pic)
                 
     def leng_hangman():
         life = 5
@@ -809,8 +819,8 @@ Additional commands:\n\
     what you find.'   
             user_riddle_guess_two = raw_input('> ')
             if user_riddle_guess_two.strip() == '':
-                paperwork.pick_up(user_inventory)
-                print riddle_win     
+                user_inventory.inventory.append(paperwork)
+                print riddle_win 
                 
         else:
             print 'Sorry. That\'s not who it is.\n'
@@ -819,17 +829,16 @@ Additional commands:\n\
     You: "We must have set off an alarm when we tried opening the desk lock!\n\
     Liam: "We have to get out of the mansion!"\n\
     You: "Now!!"'
-       
         
     if financial_riddle == False and node == study and sakshi_one >0:
-        if 'under' and 'sofa' in user_command:
+        if 'desk' in user_command:
+            financial_riddle()
+            
+        elif 'under sofa' in user_command:
             print(sofa)
             
         elif 'bookshelf'in user_command:
             print(bookshelf)
-            
-        elif user_command == 'desk':
-            financial_riddle()
         
         if paperwork in user_inventory.inventory:
             financial_riddle = True
@@ -839,14 +848,15 @@ Additional commands:\n\
         sakshi_two+=1
         
     if game_one == False and node == garden and andres_one >0:
-        if 'bushes' in user_command:
+        if 'gazebo' in user_command:
+            andres_hangman()
+        
+        elif 'bushes' in user_command:
             print(bushes)
             
         elif 'trees' in user_command:
             print(trees)
             
-        elif 'gazebo' in user_command:
-            andres_hangman()
         
         if pic in hang.inventory:
             game_one = True    
@@ -955,12 +965,6 @@ Additional commands:\n\
         
     else:
         print '?'
-    
-financial_riddle()
-        
-
-    
-        
 
 #-------------------------------------------------------------------------------
         
