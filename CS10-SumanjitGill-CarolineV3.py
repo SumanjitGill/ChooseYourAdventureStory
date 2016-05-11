@@ -6,7 +6,6 @@
 import sys
 import random
 import time
-import pickle
 
 class Inventory:
     def __init__(self):
@@ -29,7 +28,7 @@ user_inventory = Inventory()
 hang = Inventory()
 
 #-------------------------------------------------------------------------------
-
+    
 class Item:
     def __init__(self, name, description):
         self.name = name
@@ -542,17 +541,7 @@ game_two = False
 
 
 
-def save():
-    global node, user_inventory, start, case_solved, conversation, sakshi_one, sakshi_two, bree_one, bree_two, leng_one, leng_two, andres_one, andres_two, messages_read
-    with open('savegame.dat', 'wb') as f:
-        pickle.dump([node, user_inventory, start, case_solved, conversation, sakshi_one, sakshi_two, bree_one, bree_two, leng_one, leng_two, andres_one, andres_two, messages_read], f, protocol=2)
-    print 'Game successfully saved'
-    
-def load():
-    global node, user_inventory, start, case_solved, conversation, sakshi_one, sakshi_two, bree_one, bree_two, leng_one, leng_two, andres_one, andres_two, messages_read
-    with open('savegame.dat', 'rb') as f:
-        node, user_inventory, start, case_solved, conversation, sakshi_one, sakshi_two, bree_one, bree_two, leng_one, leng_two, andres_one, andres_two, messages_read = pickle.load(f)
-    print 'Game successfully loaded'
+
 #---------------------------------------------------------------------------------------------------------------------     
 
 
@@ -650,36 +639,22 @@ Additional commands:\n\
    
     if user_command in ['q', 'quit', 'exit']:
         sys.exit(0)
-    
-    elif user_command =='save':
-        save()
-    elif user_command =='load':
-        load()
-    
     elif 'police office' in user_command:
         node = police_office
-        
     elif 'study' in user_command and node in [front_yard, garden, living_room, kitchen, bedroom]:
         node = study
-        
     elif 'garden' in user_command and node in [front_yard, study, living_room, kitchen, bedroom]:
         node = garden
-        
     elif 'living room' in user_command and node in [front_yard, garden, study, kitchen, bedroom]:
         node = living_room
-        
     elif 'kitchen' in user_command and node in [front_yard, garden, living_room, study, bedroom]:
         node = kitchen
-        
     elif 'crime scene' in user_command and node in [front_yard, garden, living_room, kitchen, study]:
         node = bedroom
-        
     elif 'lab' in user_command:
         node = lab
-        
     elif 'mansion' in user_command:
         node = front_yard
-        
     elif 'search' in user_command:
         print node.description
         
