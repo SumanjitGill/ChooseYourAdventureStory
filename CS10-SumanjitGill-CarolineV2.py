@@ -8,6 +8,8 @@ import random
 import time
 import pickle
 
+
+
 class Inventory:
     def __init__(self):
         self.inventory = []
@@ -854,9 +856,14 @@ Additional commands:\n\
     You: "We must have set off an alarm when we tried opening the desk lock!\n\
     Liam: "We have to get out of the mansion!"\n\
     You: "Now!!"'
+    
+            
+    a = ['cupboard']
+    b = ['desk']
+    c = ['gazebo']
         
-    if financial_riddle == False and node == study and sakshi_one >0:
-        if 'desk' in user_command:
+    if financial_riddle == False and node == study and sakshi_two ==0 and sakshi_one >0:
+        if user_command in b:
             financial_riddle()
             
         elif 'under sofa' in user_command:
@@ -872,8 +879,8 @@ Additional commands:\n\
         print(sakshi_2)
         sakshi_two+=1
         
-    if game_one == False and node == garden and andres_one >0:
-        if 'gazebo' in user_command:
+    if game_one == False and node == garden and andres_one >0 and andres_two == 0:
+        if user_command in c:
             andres_hangman()
         
         elif 'bushes' in user_command:
@@ -889,9 +896,10 @@ Additional commands:\n\
     if game_one == True and node == garden and andres_two == 0 and andres_one >0:
         print(andres_2)
         andres_two+=1
+
         
-    if game_two == False and node == kitchen and leng_one >0:
-        if 'cupboard' in user_command:
+    elif game_two == False and node == kitchen and leng_two == 0 and leng_one >0:
+        if user_command in a:
             leng_hangman()
             
         elif 'fridge' in user_command:
@@ -907,11 +915,11 @@ Additional commands:\n\
         print(leng_2)
         leng_two +=1
             
-    if node == living_room and bree_two == 0 and bree_one >0:
+    elif node == living_room and bree_two == 0 and bree_one >0:
         print(bree_2)
         bree_two +=1
         
-    if leng_two == 1 and bree_two == 1 and andres_two == 1 and sakshi_two == 1 and node == lab:
+    elif leng_two == 1 and bree_two == 1 and andres_two == 1 and sakshi_two == 1 and node == lab:
         print(gabi_4)
         passcode_hangman()
         
