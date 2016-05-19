@@ -530,8 +530,8 @@ andres_message = 0
 unknown_message = 0
 message_end = 0
 
-global financial_riddle
-financial_riddle = False
+global financia_riddle
+financia_riddle = False
 
 global passcode_won
 passcode_won = False
@@ -862,64 +862,80 @@ Additional commands:\n\
     b = ['desk']
     c = ['gazebo']
         
-    if financial_riddle == False and node == study and sakshi_two ==0 and sakshi_one >0:
-        if user_command in b:
+    while financia_riddle == False and node == study and sakshi_two ==0 and sakshi_one >0:
+        user_command_2 = raw_input('> ')
+        if user_command_2 in b:
             financial_riddle()
             
-        elif 'under sofa' in user_command:
+        elif 'under sofa' in user_command_2:
             print(sofa)
             
-        elif 'bookshelf'in user_command:
+        elif 'bookshelf'in user_command_2:
             print(bookshelf)
         
+        elif user_command_2 in ['q', 'quit', 'exit']:
+            sys.exit(0)
+        
         if paperwork in user_inventory.inventory:
-            financial_riddle = True
+            financia_riddle = True
+            break
             
-    if financial_riddle == True and node == study and sakshi_two == 0 and sakshi_one>0:
+    if financia_riddle == True and node == study and sakshi_two == 0 and sakshi_one>0:
         print(sakshi_2)
         sakshi_two+=1
         
-    if game_one == False and node == garden and andres_one >0 and andres_two == 0:
-        if user_command in c:
+        
+    while game_one == False and node == garden and andres_one >0 and andres_two == 0:
+        user_command_3 = raw_input('> ')
+        if user_command_3 in c:
             andres_hangman()
         
-        elif 'bushes' in user_command:
+        elif 'bushes' in user_command_3:
             print(bushes)
             
-        elif 'trees' in user_command:
+        elif 'trees' in user_command_3:
             print(trees)
             
+        elif user_command_3 in ['q', 'quit', 'exit']:
+            sys.exit(0)
         
         if pic in hang.inventory:
-            game_one = True    
+            game_one = True  
+            break  
             
     if game_one == True and node == garden and andres_two == 0 and andres_one >0:
         print(andres_2)
         andres_two+=1
-
         
-    elif game_two == False and node == kitchen and leng_two == 0 and leng_one >0:
-        if user_command in a:
+        
+    while game_two == False and node == kitchen and leng_two == 0 and leng_one >0:
+        user_command_4 = raw_input('> ')
+        if user_command_4 in a:
             leng_hangman()
             
-        elif 'fridge' in user_command:
+        elif 'fridge' in user_command_4:
             print(fridge)
         
-        elif 'sink' in user_command:
+        elif 'sink' in user_command_4:
             print(sink)
+            
+        elif user_command_4 in ['q', 'quit', 'exit']:
+            sys.exit(0)
             
         if pic_2 in hang.inventory:
             game_two = True
+            break
             
     if game_two == True and node == kitchen and leng_two == 0 and leng_one >0:
         print(leng_2)
         leng_two +=1
+        
             
-    elif node == living_room and bree_two == 0 and bree_one >0:
+    if node == living_room and bree_two == 0 and bree_one >0:
         print(bree_2)
         bree_two +=1
         
-    elif leng_two == 1 and bree_two == 1 and andres_two == 1 and sakshi_two == 1 and node == lab:
+    elif leng_two == 1 and bree_two == 1 and andres_two == 1 and sakshi_two == 1 and node == lab and game_one == True and game_two == True and financia_riddle == True:
         print(gabi_4)
         passcode_hangman()
         
@@ -947,6 +963,7 @@ Additional commands:\n\
         print(end_messages)
         message_end+=1
         print('\nWell, that\'s all the sleuthing we have for now!')
+        sys.exit(0)
         
             
     elif 'examine body' in user_command:
