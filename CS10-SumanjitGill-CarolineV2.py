@@ -563,9 +563,6 @@ def load():
 #Actual Gameplay   
   
 while True:
-    while warning == 0:
-        print('\nDisclaimer: This game is not yet completely finished.\n\n')
-        warning +=1
     print('\n')
     print node.name
             
@@ -731,9 +728,9 @@ Additional commands:\n\
         else:
             print('\n')
             print('Gabriella: "Which conversation do you wanna read?"\
-                - Leng\n\
-                - Andres\n\
-                - Unknown')
+- Leng\n\
+- Andres\n\
+- Unknown')
             hang.inventory.append(pic_3)
                 
     
@@ -761,6 +758,7 @@ Additional commands:\n\
                 
             current_guess = raw_input("Guess a letter: ") #This takes in raw input
             user_guesses.append(current_guess)
+            print 'You have already guessed: ', user_guesses.strip()
             if current_guess in word: #If guess in word, remove from letters_left
                 letters_left.remove(current_guess)              
                 #print letters_left
@@ -805,6 +803,7 @@ Additional commands:\n\
                 
             current_guess = raw_input("Guess a letter: ") #This takes in raw input
             user_guesses.append(current_guess)
+            print 'You have already guessed: ', user_guesses.strip()
             if current_guess in word: #If guess in word, remove from letters_left
                 letters_left.remove(current_guess)              
                 #print letters_left
@@ -939,7 +938,7 @@ Additional commands:\n\
         print(gabi_4)
         passcode_hangman()
         
-    if messages_read < 3 and pic_3 in hang.inventory:
+    while messages_read < 3 and pic_3 in hang.inventory:
         
         if 'leng' in user_command:
             print(message_leng)

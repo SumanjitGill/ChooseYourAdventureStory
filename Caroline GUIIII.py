@@ -13,8 +13,7 @@ import Tkinter, tkFont
 root = Tkinter.Tk()
 root.title('Sin')
 
-canvas = Tkinter.Canvas(root, height = 750, width = 1400, relief = Tkinter.RAISED, bg = 'white')
-#canvas.grid()
+
 '''
 scrollbar = Tkinter.Scrollbar(root)
 scrollbar.grid(row = 0, column = 6, rowspan = 4, sticky = Tkinter.N + Tkinter.S)
@@ -577,9 +576,8 @@ def load():
 #Actual Gameplay   
   
 while True:
-    while warning == 0:
-        print('\nDisclaimer: This game is not yet completely finished.\n\n')
-        warning +=1
+    canvas = Tkinter.Canvas(root, height = 750, width = 1400, relief = Tkinter.RAISED, bg = 'white')
+    canvas.grid()
     print('\n')
     print node.name
             
